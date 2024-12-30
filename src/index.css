@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.random-class img {
+  width: 60vw;
+  height: 400px;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+.random-class td {
+  border: 1px solid black;
+}
