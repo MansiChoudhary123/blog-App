@@ -39,7 +39,12 @@ const Login = () => {
         };
         alert("Login successful!");
         localStorage.setItem("user", JSON.stringify(userResData));
+
+        // Navigate to the home page
         navigate("/");
+
+        // Reload the page after navigation
+        window.location.reload();
       }
     } catch (error) {
       const err = error.response.data.message;
@@ -94,7 +99,14 @@ const Login = () => {
             Login
           </button>
         </form>
-        <p className="text-center mt-2">New user?<Link to="/registration"><span className="text-blue-500 hover:underline">Create account first</span></Link></p>
+        <p className="text-center mt-2">
+          New user?
+          <Link to="/registration">
+            <span className="text-blue-500 hover:underline">
+              Create account first
+            </span>
+          </Link>
+        </p>
       </div>
     </div>
   );
